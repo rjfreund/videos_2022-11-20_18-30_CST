@@ -11,7 +11,7 @@
     "add": "git add -A",
     "commit": "git commit -m \"-\"",
     "push": "git push",
-    "deploy": "gh-pages -d out",
+    "deploy": "gh-pages -d out -t true",
     "publish": "run-s build export add_nojekyll add commit push deploy",
     "start": "next start",
     "lint": "next lint"
