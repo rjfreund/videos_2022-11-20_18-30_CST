@@ -12,7 +12,7 @@ const basePath_index = next_config.findIndex(function (config_line) {
 let new_basePath = '';
 switch (argv.env) {
     case 'dev':
-        new_basePath = next_config[basePath_index].replace(/basePath: \".*\"/, "basePath: \"/\"");
+        new_basePath = next_config[basePath_index].replace(/basePath: \".*\"/, "basePath: \"\"");
         break;
     case 'prod': //for github pages
     default:
