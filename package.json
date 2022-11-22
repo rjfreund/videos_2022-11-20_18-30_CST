@@ -1,10 +1,13 @@
 {
   "name": "videos_2022-11-20_18-30_cst",
   "version": "0.1.0",
+  "homepage": "https://rjfreund.github.io/videos_2022-11-20_18-30_CST",
   "private": true,
   "scripts": {
     "dev": "next dev",
     "build": "next build",
+    "export": "next export",
+    "deploy": "gh-pages -d out",
     "start": "next start",
     "lint": "next lint"
   },

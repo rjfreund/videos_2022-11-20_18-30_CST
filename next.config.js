@@ -4,6 +4,7 @@ const nextConfig = {
   images: {
     unoptimized: true,
   },
+  assetPrefix: "/videos_2022-11-20_18-30_CST"
 }
 
 module.exports = nextConfig
