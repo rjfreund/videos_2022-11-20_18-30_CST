@@ -4,7 +4,12 @@
   "homepage": "https://rjfreund.github.io/videos_2022-11-20_18-30_CST",
   "private": true,
   "scripts": {
-    "dev": "next dev",
+    "dev": "run-s adjust_base_path_dev next_dev",
+    "next_dev": "next dev",
+    "adjust_base_path_dev": "node adjust_base_path.js --env=dev",
+    "adjust_base_path_prod": "node adjust_base_path.js --env=prod",
+    "build_dev": "run-s adjust_base_path_dev build",
+    "build_prod": "run-s adjust_base_path_prod build",
     "build": "next build",
     "export": "next export",
     "add_nojekyll": "touch out/.nojekyll",
@@ -12,7 +17,7 @@
     "commit": "git commit -m \"-\"",
     "push": "git push",
     "deploy": "gh-pages -d out -t true",
-    "publish": "run-s build export add_nojekyll add commit push deploy",
+    "publish": "run-s build_prod export add_nojekyll add commit push deploy",
     "start": "next start",
     "lint": "next lint"
   },
@@ -23,7 +28,8 @@
     "gh-pages": "^4.0.0",
     "next": "13.0.4",
     "react": "18.2.0",
-    "react-dom": "18.2.0"
+    "react-dom": "18.2.0",
+    "yargs": "^17.6.2"
   },
   "devDependencies": {
     "npm-run-all": "^4.1.5",

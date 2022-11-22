@@ -8,7 +8,7 @@ export default function Home() {
       <Head>
         <title>R.J. Freund&apos;s Video Recordings of Singing</title>
         <link rel="preconnect" href="https://fonts.googleapis.com" />
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="true" />
         <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&display=swap" rel="stylesheet" />
       </Head>
       <div className='container text-center py-4'>
